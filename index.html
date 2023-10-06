@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <!-- Include html2canvas library (if you're using it for capturing content as an image) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.1/html2canvas.min.js"></script>
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfolio website complete</title>
+
+</head>
+<body>
+<!--===== HEADER =====-->
+<header class="l-header">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="#" class="nav__logo">Hamza</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" id="downloadLink">Download Resume As PDF</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+</header>
+
+<main class="l-main">
+    <!--===== HOME =====-->
+    <section class="home bd-grid" id="home">
+        <div class="home__data">
+            <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Hamza Jaa</span><br> Java Full Stack
+                Developer</h1>
+
+            <a href="#contact" class="button">Contact</a>
+        </div>
+
+        <div class="home__social">
+            <a href="https://www.linkedin.com/in/hamza-jaa-09b72223a/" class="home__social-icon"><i
+                    class='bx bxl-linkedin'></i></a>
+            <a href="mailto:hamzajaa2017@gmail.com" class="home__social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/hamzajaa" class="home__social-icon"><i class='bx bxl-github'></i></a>
+        </div>
+
+        <div class="home__img">
+            <svg class="home__blob" width="479" height="467" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <clipPath id="maskPath">
+                        <path d="M9.19024,145.964
+         C34.0253,76.5814 114.865,54.7299 184.111,29.4823
+         C245.804,6.98884 311.86,-14.9503 370.735,14.143
+         C431.207,44.026 467.948,107.508 477.191,174.311
+         C485.897,237.229 454.931,294.377 416.506,344.954
+         C373.74,401.245 326.068,462.801 255.442,466.189
+         C179.416,469.835 111.552,422.137 65.1576,361.805
+         C17.4835,299.81 -17.1617,219.583 9.19024,145.964
+         Z"/>
+                    </clipPath>
+                </defs>
+                <image width="479" height="467" xlink:href="assets/img/photo.png" style="clip-path: url(#maskPath);"/>
+            </svg>
+        </div>
+
+
+    </section>
+
+    <!--===== ABOUT =====-->
+    <section class="about section " id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+            <div class="about__img">
+                <img src="assets/img/photo.jpg" alt="">
+            </div>
+
+
+            <div class="col-md-4 classMargin">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-body">
+                        <div>
+                            <h2 class="about__subtitle">I'am Hamza</h2>
+                            <p class="about__text" style="font-weight: bold">
+                                My expertise spans a diverse array of technologies, ranging from Java and TypeScript to
+                                popular frontend frameworks like AngularJs and ReactJs, along with its mobile
+                                counterpart, React Native. My proficiency extends to foundational web technologies such
+                                as HTML, CSS, and Bootstrap, enabling me to craft visually appealing and responsive user
+                                interfaces. In the realm of backend development, I've mastered the Spring Frameworks,
+                                including Spring Data JPA, Spring Service, Spring Security, and SpringCloud for building
+                                robust microservices architectures. My familiarity with tools like JWT for secure
+                                authentication and Git for version control demonstrates my commitment to best practices.
+                                Additionally, I've honed my skills in REST API design, documentation using Swagger API,
+                                and testing methodologies employing Mockito and JUnit. My expertise further extends to
+                                server-side rendering with Thymeleaf, ensuring seamless integration of frontend and
+                                backend components. Lastly, my proficiency in containerization technologies like Docker,
+                                as well as creating Dockerfiles and Docker-compose configurations, showcases my ability
+                                to deploy applications efficiently and consistently across various environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--===== SKILLS =====-->
+    <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills__container bd-grid">
+
+
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxs-java skills__icon'></i>
+                    <span class="skills__name">JAVA</span>
+                </div>
+                <div class="skills__bar skills__ux">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">90%</span>
+                </div>
+            </div>
+
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx skills__icon'></i>
+                    <span class="skills__name">SPRINGBOOT</span>
+                </div>
+                <div class="skills__bar skills__ux">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">92%</span>
+                </div>
+            </div>
+
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-javascript skills__icon'></i>
+                    <span class="skills__name">TYPESCRIPT</span>
+                </div>
+                <div class="skills__bar skills__js">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">65%</span>
+                </div>
+
+            </div>
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-javascript skills__icon'></i>
+                    <span class="skills__name">ANGULARJS</span>
+                </div>
+                <div class="skills__bar skills__js">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">65%</span>
+                </div>
+
+            </div>
+
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-javascript skills__icon'></i>
+                    <span class="skills__name">REACTJS</span>
+                </div>
+                <div class="skills__bar skills__js">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">65%</span>
+                </div>
+
+            </div>
+
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-html5 skills__icon'></i>
+                    <span class="skills__name">HTML5</span>
+                </div>
+                <div class="skills__bar skills__html">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">95%</span>
+                </div>
+            </div>
+
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-css3 skills__icon'></i>
+                    <span class="skills__name">CSS3</span>
+                </div>
+                <div class="skills__bar skills__css">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">85%</span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!--===== Education =====-->
+    <section class="work section" id="education" style="flex: revert">
+        <h2 class="section-title">Education</h2>
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="col-md-4 classMargin">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Developing a Full-Stack App: Spring Boot + JPA + Thymeleaf</h5>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/hamza-jaa-09b72223a_development-webdevelopment-javadeveloper-activity-7054589850338914305-6BL-?utm_source=share&utm_medium=member_desktop"
+                           class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 classMargin">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Containerizing Springboot CRUD App with Docker & Docker Compose</h5>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/hamza-jaa-09b72223a_i-completed-the-course-on-containerizing-activity-7054212817846980608-tohX?utm_source=share&utm_medium=member_desktop"
+                           class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 classMargin">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Practical Java-8 Mastery Course</h5>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/hamza-jaa-09b72223a_i-completing-the-practical-java-8-mastery-activity-7054166048761073664-2tzV?utm_source=share&utm_medium=member_desktop"
+                           class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 classMargin">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Zero to Hero Java SpringBoot & JPA Mastery with Real Project</h5>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/hamza-jaa-09b72223a_development-webdevelopment-javadeveloper-activity-7054162251913519104-0nmz?utm_source=share&utm_medium=member_desktop"
+                           class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 classMargin">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Developing Role-Based Full-Stack App: Spring Boot + Angular</h5>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/hamza-jaa-09b72223a_development-webdevelopment-javadeveloper-activity-7054159995923238912-s9p_?utm_source=share&utm_medium=member_desktop"
+                           class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 classMargin">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Building Real-Time REST APIs with Spring Boot - Blog App</h5>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/hamza-jaa-09b72223a_building-projects-docker-activity-7062145350928625664-X35D?utm_source=share&utm_medium=member_desktop"
+                           class="btn btn-primary">Visit</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--===== WORK =====-->
+    <section class="work section" id="work">
+        <h2 class="section-title">Work</h2>
+
+        <h4 class="text-center">Hotel Management Project</h4>
+        <div class="work__container bd-grid">
+
+            <a href="assets/img/AdEm.png" class="work__img">
+                <img src="assets/img/AdEm.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/Home.png" class="work__img">
+                <img src="assets/img/home1.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/Login.png" class="work__img">
+                <img src="assets/img/Login.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/Register.png" class="work__img">
+                <img src="assets/img/Register.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/Dashboard1.png" class="work__img">
+                <img src="assets/img/Dashboard1.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/Dashboard2.png" class="work__img">
+                <img src="assets/img/Dashboard2.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/Booking.png" class="work__img">
+                <img src="assets/img/Booking.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/room.png" class="work__img">
+                <img src="assets/img/room.png" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/Researche.png" class="work__img">
+                <img src="assets/img/Researche.png" alt="" class="thumbnail">
+            </a>
+
+            <!-- Add a modal for displaying the full-size image -->
+            <div class="modal" id="imageModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img class="modal-img" id="modalImage">
+                </div>
+            </div>
+
+        </div>
+
+        <h4 class="text-center mt-4">Marketplace Services Project</h4>
+        <div class="work__container bd-grid">
+
+            <a href="assets/img/app%201.jpg" class="work__img">
+                <img src="assets/img/app%201.jpg" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/app%202.jpg" class="work__img">
+                <img src="assets/img/app%202.jpg" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/app%203.jpg" class="work__img">
+                <img src="assets/img/app%203.jpg" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/app%204.jpg" class="work__img">
+                <img src="assets/img/app%204.jpg" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/app%205.jpg" class="work__img">
+                <img src="assets/img/app%205.jpg" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/app%206.jpg" class="work__img">
+                <img src="assets/img/app%206.jpg" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/app%207.jpg" class="work__img">
+                <img src="assets/img/app%207.jpg" alt="" class="thumbnail">
+            </a>
+
+            <a href="assets/img/app%208.jpg" class="work__img">
+                <img src="assets/img/app%208.jpg" alt="" class="thumbnail">
+            </a>
+
+        </div>
+
+    </section>
+
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+            <form action="" class="contact__form text-center">
+                <label>
+                    <input type="text" placeholder="Name" class="contact__input">
+                </label>
+                <label>
+                    <input type="mail" placeholder="Email" class="contact__input">
+                </label>
+                <label for=""></label><textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+            </form>
+            <input type="button" value="Send" class="contact__button button">
+        </div>
+    </section>
+</main>
+
+<!--===== FOOTER =====-->
+<footer class="footer">
+    <p class="footer__title">Hamza Jaa</p>
+    <div class="footer__social">
+        <a href="https://www.facebook.com/HamzaJaaSt" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.instagram.com/hamzajaast/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+        <a href="https://twitter.com/Hamza7Jaa" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+    </div>
+    <p class="footer__copy">&#169; jaa. All rigths reserved</p>
+</footer>
+
+
+<!--===== SCROLL REVEAL =====-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!--===== MAIN JS =====-->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
