@@ -528,3 +528,10 @@ img {
     width: 450px;
   }
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Set a specific height if needed */
+}
