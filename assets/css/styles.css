@@ -535,3 +535,7 @@ img {
   align-items: center;
   height: 100px; /* Set a specific height if needed */
 }
+
+.marginCard {
+  margin-bottom: 0.5rem;
+}
